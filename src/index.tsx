@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+import './css/app.scss'
 
 export * from './components'
 
@@ -8,5 +8,5 @@ interface Props {
 }
 
 export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+  return <div>Example Component: {text}</div>
 }

@@ -25,7 +25,7 @@ const App = () => {
       </div>
 
       <div>
-        <h3>Inputs</h3>
+        <h3 className="h2">Inputs</h3>
         <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <Input
             labelText="Usuario"
