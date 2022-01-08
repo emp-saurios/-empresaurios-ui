@@ -7,21 +7,20 @@
 ## Install
 
 ```bash
-npm install --save empresaurios-ui
+npm install --save @emp-saurios/empresaurios-ui
 ```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'empresaurios-ui'
-import 'empresaurios-ui/dist/index.css'
+import { Input } from '@emp-saurios/empresaurios-ui'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+  return (
+    <Input />
+  )
 }
 ```
 

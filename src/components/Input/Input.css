@@ -1,3 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  margin-bottom: 0.5rem;
+}
+
 input {
-  background-color: white;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.default {
+  border: 1px solid gray;
+}
+
+.success {
+  border: 1px solid greenyellow;
+}
+
+.warning {
+  border: 1px solid yellow;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+input:disabled {
+  background-color: gainsboro;
+  border: none;
+}
+
+.iconClass {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  margin-right: 0.5rem;
+  margin-top: 0.35rem; /* Diosito perdóname */
+}
+
+.inputContainer {
+  position: relative;
 }
