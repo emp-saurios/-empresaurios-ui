@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './css/app.scss'
+import './styles/main.scss'
 
 export * from './components'
 
