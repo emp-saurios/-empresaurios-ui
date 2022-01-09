@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { ExampleComponent, Button, Input, Separator, Form } from 'empresaurios-ui'
+import { ExampleComponent, Input, Separator, Form } from 'empresaurios-ui'
 import 'empresaurios-ui/dist/index.css'
+import ButtonSection from './sections/Buttons/ButtonSection'
 
 const IconTest = () => (
   <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -17,12 +18,9 @@ const IconTest = () => (
 const App = () => {
   return (
     <div style={{ padding: '0 2rem' }}>
-      <ExampleComponent text="Create React Library Example 😄" />
-      <div>
-        <h3>Botones</h3>
-        <Button title="otro hola">Hola</Button>
-        <hr />
-      </div>
+      <ExampleComponent text="Empresaurios components UI 😄" />
+
+      <ButtonSection />
 
       <div>
         <h3 className="h2">Inputs</h3>

@@ -1,0 +1,51 @@
+.btn {
+  --primary: #3b82f6;
+  --light: #dbeafe;
+
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+
+  &.default {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  &.light {
+    background-color: var(--light);
+    color: var(--primary);
+  }
+
+  &.white {
+    background-color: white;
+    color: var(--primary);
+  }
+
+  &.ghost {
+    background-color: var(--light);
+    color: var(--primary);
+    border: solid 1.5px var(--primary);
+  }
+
+  &.link {
+    color: var(--primary);
+    background-color: transparent;
+  }
+
+  &.normal {
+    padding: 1rem;
+  }
+
+  &.small {
+    padding: 0.5rem;
+  }
+
+  &.smaller {
+    padding: 0.2rem;
+  }
+}

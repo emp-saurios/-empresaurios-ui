@@ -65,6 +65,7 @@
     "dist"
   ],
   "dependencies": {
-    "sass": "^1.45.1"
+    "@heroicons/react": "^1.0.5",
+    "sass": "^1.47.0"
   }
 }
