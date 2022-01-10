@@ -14,9 +14,10 @@ const Icon: FC<IconProps> = ({ icon, iconType }) => {
 }
 
 export type HeroIconsType = keyof typeof HeroIcons
+export type IconType = 'outline' | 'solid'
 
 type IconProps = {
-  iconType: 'outline' | 'solid'
+  iconType: IconType
   icon: HeroIconsType
 }
 

@@ -17,4 +17,5 @@ section > .section-container {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1rem;
 }
