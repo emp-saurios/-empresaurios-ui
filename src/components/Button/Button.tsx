@@ -1,7 +1,7 @@
 import React, { FC, ButtonHTMLAttributes } from 'react'
 import Icon from '../Icon'
 import styles from './Button.scss'
-import { HeroIconsType } from '../Icon/Icon'
+import { HeroIconsType, IconType } from '../Icon/Icon'
 
 const Button: FC<ButtonProps> = ({
   children,
@@ -13,7 +13,8 @@ const Button: FC<ButtonProps> = ({
   iconType = 'outline',
   ...rest
 }) => {
-  const btnClassName = `${styles.btn} ${styles[typeButton]} ${styles[size]} ${className}`
+  const actionBtnWithText = typeButton === 'action' && children ? styles.withText : ''
+  const btnClassName = `${styles.btn} ${styles[typeButton]} ${styles[size]} ${className} ${actionBtnWithText}`
 
   return (
     <button className={btnClassName} {...rest}>
@@ -30,9 +31,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
   icon?: HeroIconsType
   iconSide?: 'left' | 'right'
-  typeButton?: 'default' | 'light' | 'white' | 'ghost' | 'link'
+  typeButton?: 'default' | 'light' | 'white' | 'ghost' | 'link' | 'action'
   size?: 'normal' | 'small' | 'smaller'
-  iconType?: 'outline' | 'solid'
+  iconType?: IconType
 }
 
 export default Button
