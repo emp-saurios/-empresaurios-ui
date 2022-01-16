@@ -1,6 +1,8 @@
 .btn {
   --primary: #3b82f6;
   --light: #dbeafe;
+  --grey-light: #8e9ba4;
+  --grey-bg: #f1f6f9;
 
   background-color: transparent;
   display: flex;
@@ -35,6 +37,27 @@
   &.link {
     color: var(--primary);
     background-color: transparent;
+  }
+
+  &.action {
+    border: none;
+    border-radius: 100%;
+    padding: 0.5rem !important;
+    color: var(--grey-light);
+    font-size: 1rem;
+
+    &:hover {
+      background-color: var(--grey-bg);
+    }
+
+    &.withText {
+      border-radius: 50px;
+    }
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
   }
 
   &.normal {
