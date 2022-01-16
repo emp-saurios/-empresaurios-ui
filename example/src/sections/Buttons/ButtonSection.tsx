@@ -4,7 +4,7 @@ import { Button } from 'empresaurios-ui'
 const ButtonSection = () => {
   return (
     <section>
-      <h3>Botones</h3>
+      <h3>Botones :)</h3>
       <div className="section-container">
         <div>
           <label htmlFor="default">Default</label>
@@ -22,7 +22,7 @@ const ButtonSection = () => {
         <div>
           <label htmlFor="white">White</label>
           <Button id="white" typeButton="white" icon="ThumbUpIcon" iconSide="left" iconType="solid">
-            Button
+            Button a
           </Button>
         </div>
         <div>
@@ -35,7 +35,7 @@ const ButtonSection = () => {
             iconSide="left"
             iconType="solid"
           >
-            Button
+            Button small
           </Button>
         </div>
         <div>
@@ -48,7 +48,7 @@ const ButtonSection = () => {
             iconSide="left"
             iconType="solid"
           >
-            Button
+            Button smaller
           </Button>
         </div>
         <div>

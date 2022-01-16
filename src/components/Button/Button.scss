@@ -1,74 +1,64 @@
-.btn {
-  --primary: #3b82f6;
-  --light: #dbeafe;
-  --grey-light: #8e9ba4;
-  --grey-bg: #f1f6f9;
+.button {
+  --button-color   : var(--blue-500);
+  display          : inline-flex;
+  justify-content  : center;
+  align-items      : center;
+  padding          : 0.5rem 1rem;
+  border-radius    : 0.375rem; /* 6px */
+  gap              : 0.5rem;
+  border           : 1.5px solid var(--button-color);
+  background-color : var(--button-color);
+  color            : var(--white-color);
+  font-size        : var(--normal-font-size);
+  font-family      : var(--body-font-family);
+  white-space      : nowrap;
+  font-weight      : bold;
+  cursor           : pointer;
+  transition       : background-color 150ms, border-color 150ms, transform 150ms;
 
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-
-  &.default {
-    background-color: var(--primary);
-    color: white;
+  &:hover {
+    --button-color : var(--blue-600);
   }
 
-  &.light {
-    background-color: var(--light);
-    color: var(--primary);
+  &:active {
+    transform : scale(0.95);
   }
 
-  &.white {
-    background-color: white;
-    color: var(--primary);
-  }
-
-  &.ghost {
-    background-color: var(--light);
-    color: var(--primary);
-    border: solid 1.5px var(--primary);
-  }
-
-  &.link {
-    color: var(--primary);
-    background-color: transparent;
-  }
-
-  &.action {
-    border: none;
-    border-radius: 100%;
-    padding: 0.5rem !important;
-    color: var(--grey-light);
-    font-size: 1rem;
-
-    &:hover {
-      background-color: var(--grey-bg);
-    }
-
-    &.withText {
-      border-radius: 50px;
-    }
-
-    svg {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-  }
-
-  &.normal {
-    padding: 1rem;
-  }
-
+  /* ----- Sizes ----- */
   &.small {
-    padding: 0.5rem;
+    font-size      : var(--small-font-size);
+    padding-inline : 0.875rem; /* 14px */
   }
 
   &.smaller {
-    padding: 0.2rem;
+    font-size : var(--smaller-font-size);
+    padding   : 0.375rem 0.625rem;
+  }
+
+  /* ----- Variants ----- */
+  &:not(:hover) {
+    &.light {
+      background-color : var(--blue-100);
+      border-color     : var(--blue-100);
+      color            : var(--button-color);
+    }
+
+    &.white {
+      color            : var(--button-color);
+      background-color : var(--white-color);
+      border-color     : var(--white-color);
+      box-shadow       : var(--shadow-sm);
+    }
+
+    &.ghost {
+      background-color : transparent;
+      color            : var(--button-color)
+    }
+
+    &.link {
+      background-color : transparent;
+      border-color     : transparent;
+      color            : var(--button-color);
+    }
   }
 }
