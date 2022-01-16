@@ -62,3 +62,31 @@
     }
   }
 }
+
+.action {
+  --size           : 2rem;
+  display          : inline-flex;
+  align-items      : center;
+  justify-content  : center;
+  flex-wrap        : nowrap;
+  gap              : 0.05rem;
+  height           : var(--size);
+  min-width        : var(--size);
+  border           : none;
+  border-radius    : calc(var(--size) / 2);
+  color            : var(--grey-light-color);
+  font-size        : var(--small-font-size);
+  background-color : transparent;
+  cursor           : pointer;
+  transition       : background-color 150ms;
+
+  // No hay manera directa de acceder al ícono desde el módulo
+  svg {
+    width  : 1.25rem;
+    height : 1.25rem;
+  }
+
+  &:hover {
+    background-color : var(--bg-alt-color);
+  }
+}

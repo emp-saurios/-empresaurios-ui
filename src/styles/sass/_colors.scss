@@ -62,11 +62,12 @@ $yellow : (
   @include create-color(yellow, $yellow);
   @include create-color(green, $green);
   --body-bg-color      : #FBFDFE;
-  --body-bg-alt-color  : #F3F4F6;
+  --bg-alt-color       : #F3F4F6;
   --border-color       : #E5E7EB;
-  --text-lighter-color : #4B5563;
-  --text-light-color   : #9CA3AF;
-  --text-color         : #6B7280;
+  --grey-lighter-color : #4B5563;
+  --grey-light-color   : #9CA3AF;
+  --grey-color         : #6B7280;
+  --text-color         : var(--grey-color);
   --title-color        : #0F172A;
   --black-color        : #000000;
   --white-color        : #FFFFFF;

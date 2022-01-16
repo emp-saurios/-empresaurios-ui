@@ -14,7 +14,7 @@ const Button: FC<ButtonProps> = ({
   ...rest
 }) => {
   const actionBtnWithText = typeButton === 'action' && children ? styles.withText : ''
-  const btnClassName = `${styles.button} ${styles[typeButton]} ${styles[size]} ${className} ${actionBtnWithText}`
+  const btnClassName = typeButton === 'action' ? styles.action : `${styles.button} ${styles[typeButton]} ${styles[size]} ${className} ${actionBtnWithText}`
 
   return (
     <button className={btnClassName} {...rest}>
