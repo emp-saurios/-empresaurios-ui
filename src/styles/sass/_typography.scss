@@ -40,9 +40,9 @@ body {
 
 $heading-selector : '';
 @for $i from 1 through 4 {
-  $heading-selector : $heading-selector + 'h#{$i}, .h#{$i},';
+  $heading-selector : $heading-selector + 'h#{$i}, :global(.h#{$i}),';
   h#{$i},
-  .h#{$i} {
+  :global(.h#{$i}) {
     font-size : var(--h#{$i}-font-size);
   }
 }
