@@ -1,47 +1,28 @@
-.label_ {
-  font-size: var(--small-font-size);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-}
-
-.success {
-  .message_ {
-    background-color: green;
-  }
-}
-
-.error {
-  .message_ {
-    background-color: red;
-    color: red;
-  }
-}
-
-.warning {
-  .message_ {
-    background-color: yellow;
-  }
+.label {
+  font-size     : var(--small-font-size);
+  font-weight   : 600;
+  margin-bottom : 0.5rem;
+  color         : var(--text-color);
 }
 
 .input {
-  position: relative;
+  position : relative;
 }
 
 .fill {
-  margin-bottom: 0.25rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 0.25rem;
-  color: var(--text-color);
-  font-size: var(--small-font-size);
+  margin-bottom : 0.25rem;
+  padding       : 0.5rem 1rem;
+  border        : 1px solid var(--border-color);
+  border-radius : 0.25rem;
+  color         : var(--text-color);
+  font-size     : var(--small-font-size);
 
   &:focus {
-    outline: 1.5px solid var(--blue-300);
+    outline : 1.5px solid var(--blue-300);
   }
 
   &::placeholder {
-    color: var(--grey-lighter-color);
+    color : var(--grey-lighter-color);
   }
 
   &.success {
@@ -49,16 +30,35 @@
 }
 
 .icon_ {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.25rem;
-  height: 1.25em;
-  color: var(--grey-lighter-color);
+  position  : absolute;
+  right     : 0.5rem;
+  top       : 50%;
+  transform : translateY(-50%);
+  width     : 1.25rem;
+  height    : 1.25em;
+  color     : var(--grey-lighter-color);
 }
 
 .message_ {
-  color: var(--grey-lighter-color);
-  font-size: var(--smaller-font-size);
+  color     : var(--grey-lighter-color);
+  font-size : var(--smaller-font-size);
+}
+
+/* ----- Variants ----- */
+
+.success .fill {
+  border-color : var(--green-500);
+}
+
+.error .fill {
+  border-color : var(--red-500);
+}
+
+.warning .fill {
+  border-color : var(--yellow-500);
+}
+
+.disabled .fill {
+  background-color : var(--border-color);
+  cursor           : no-drop;
 }

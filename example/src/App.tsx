@@ -56,6 +56,14 @@ const App = () => {
             message="Este es un mensaje de prueba"
             variant="warning"
           />
+
+          <Input
+            title="Usuario"
+            placeholder="jean@jeanda.mx"
+            icon={<IconTest />}
+            message="Este es un mensaje de prueba"
+            variant="disabled"
+          />
         </section>
         <hr />
       </div>

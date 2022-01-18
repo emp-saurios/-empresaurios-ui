@@ -1,13 +1,13 @@
 import React, { FC, InputHTMLAttributes, ReactNode } from 'react'
 import styles from './Input.scss'
 
-const Input: FC<InputProps> = ({ name, title, variant = 'success', message, icon, ...rest }) => {
-  const { icon_, input, label_, fill, message_ } = styles
+const Input: FC<InputProps> = ({ name, title, variant = '', message, icon, ...rest }) => {
+  const { icon_, input, label, fill, message_ } = styles
 
   return (
     <div className={styles[variant]}>
       {title && (
-        <label className={label_} htmlFor={name}>
+        <label className={label} htmlFor={name}>
           {title}
         </label>
       )}
@@ -20,7 +20,7 @@ const Input: FC<InputProps> = ({ name, title, variant = 'success', message, icon
   )
 }
 
-type Variants = 'success' | 'error' | 'warning'
+type Variants = 'success' | 'error' | 'warning' | 'disabled'
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string
   variant?: Variants
