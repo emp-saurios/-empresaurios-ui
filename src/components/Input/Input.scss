@@ -5,6 +5,25 @@
   color: var(--text-color);
 }
 
+.success {
+  .message_ {
+    background-color: green;
+  }
+}
+
+.error {
+  .message_ {
+    background-color: red;
+    color: red;
+  }
+}
+
+.warning {
+  .message_ {
+    background-color: yellow;
+  }
+}
+
 .input {
   position: relative;
 }
@@ -42,9 +61,4 @@
 .message_ {
   color: var(--grey-lighter-color);
   font-size: var(--smaller-font-size);
-}
-
-.successMsg {
-  background-color: red;
-  color: red;
 }
