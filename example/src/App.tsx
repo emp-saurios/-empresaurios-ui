@@ -26,34 +26,34 @@ const App = () => {
         <h3 className="h2">Inputs</h3>
         <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <Input
-            labelText="Usuario"
+            title="Usuario"
             placeholder="jean@jeanda.mx"
             icon={<IconTest />}
-            smallText="Este es un mensaje de prueba"
+            message="Este es un mensaje de prueba"
           />
-          <Input labelText="Usuario" placeholder="jean@jeanda.mx" icon={<IconTest />} />
-          <Input labelText="Usuario" placeholder="jean@jeanda.mx" />
+          <Input title="Usuario" placeholder="jean@jeanda.mx" icon={<IconTest />} />
+          <Input title="Usuario" placeholder="jean@jeanda.mx" />
           <Input placeholder="jean@jeanda.mx" />
           <Input placeholder="jean@jeanda.mx" icon={<IconTest />} />
           <Input
-            labelText="Usuario"
+            title="Usuario success"
             placeholder="jean@jeanda.mx"
             icon={<IconTest />}
-            smallText="Este es un mensaje de prueba"
+            message="Este es un mensaje de prueba"
             variant="success"
           />
           <Input
-            labelText="Usuario"
+            title="Usuario"
             placeholder="jean@jeanda.mx"
             icon={<IconTest />}
-            smallText="Este es un mensaje de prueba"
+            message="Este es un mensaje de prueba"
             variant="error"
           />
           <Input
-            labelText="Usuario"
+            title="Usuario"
             placeholder="jean@jeanda.mx"
             icon={<IconTest />}
-            smallText="Este es un mensaje de prueba"
+            message="Este es un mensaje de prueba"
             variant="warning"
           />
         </section>
@@ -69,8 +69,8 @@ const App = () => {
       <div>
         <h3>Formularios</h3>
         <Form titleText="Registrate gratis">
-          <Input labelText="Usuario" type="email" placeholder="jean@jeanda.mx" />
-          <Input labelText="Contraseña" type="password" value="123123" />
+          <Input title="Usuario" type="email" placeholder="jean@jeanda.mx" />
+          <Input title="Contraseña" type="password" value="123123" />
         </Form>
         <hr />
       </div>
