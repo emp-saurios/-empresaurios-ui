@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'empresaurios-ui'
+import { Button, Switch } from 'empresaurios-ui'
 
 const ButtonSection = () => {
   return (
@@ -60,6 +60,10 @@ const ButtonSection = () => {
           <Button id="actionWithText" typeButton="action" icon="TrashIcon" iconSide="left">
             Delete
           </Button>
+        </div>
+        <div>
+          <label htmlFor="switch">Switch</label>
+          <Switch name="switch" active={true} />
         </div>
       </div>
       <hr />

@@ -1,17 +1,12 @@
-import React, { FC } from 'react'
+import React, { FC, HTMLProps } from 'react'
 import './Switch.css'
 
-const Switch: FC<SwitchProps> = ({ text }) => {
-  return (
-    <div>
-      <p>{text}</p>
-      <hr />
-    </div>
-  )
+const Switch: FC<SwitchProps> = ({ active, ...rest }) => {
+  return <input type="checkbox" checked={active} {...rest} />
 }
 
-interface SwitchProps {
-  text?: string
+interface SwitchProps extends HTMLProps<HTMLInputElement> {
+  active?: boolean
 }
 
 export default Switch
