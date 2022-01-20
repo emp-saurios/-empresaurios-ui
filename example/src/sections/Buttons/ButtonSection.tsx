@@ -1,31 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Switch } from 'empresaurios-ui'
 
 const ButtonSection = () => {
+  const [state, setState] = useState({
+    toggleValue: true,
+    checkboxValue: true
+  })
+
+  const { checkboxValue, toggleValue } = state
+
+  const onChange = (target: keyof typeof state) => {
+    setState({
+      ...state,
+      [target]: !state[target]
+    })
+  }
+
   return (
     <section>
       <h3>Botones :)</h3>
       <div className="section-container">
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="default">Default</label>
           <Button id="default" typeButton="default">
             Button
           </Button>
         </div>
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="light">Light</label>
           <Button id="light" typeButton="light" icon="ThumbUpIcon" iconType="outline">
             Button
           </Button>
         </div>
 
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="white">White</label>
           <Button id="white" typeButton="white" icon="ThumbUpIcon" iconSide="left" iconType="solid">
             Button a
           </Button>
         </div>
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="ghost">Ghost</label>
           <Button
             id="ghost"
@@ -38,7 +52,7 @@ const ButtonSection = () => {
             Button small
           </Button>
         </div>
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="link">Link</label>
           <Button
             id="link"
@@ -51,19 +65,28 @@ const ButtonSection = () => {
             Button smaller
           </Button>
         </div>
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="action">Action</label>
           <Button id="action" typeButton="action" icon="TrashIcon" iconSide="left" />
         </div>
-        <div>
+        <div className="wrapper-container">
           <label htmlFor="actionWithText">Action with text</label>
           <Button id="actionWithText" typeButton="action" icon="TrashIcon" iconSide="left">
             Delete
           </Button>
         </div>
-        <div>
-          <label htmlFor="switch">Switch</label>
-          <Switch name="switch" active={true} />
+        <div className="wrapper-container">
+          <label htmlFor="switch">Switch (Toggle)</label>
+          <Switch type="toggle" name="switch" active={toggleValue} />
+        </div>
+        <div className="wrapper-container">
+          <label htmlFor="switch-checkbox">Switch (Checkbox)</label>
+          <Switch
+            type="checkbox"
+            onChange={() => onChange('checkboxValue')}
+            name="switch-checkbox"
+            active={checkboxValue}
+          />
         </div>
       </div>
       <hr />
