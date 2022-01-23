@@ -76,8 +76,11 @@ const ButtonSection = () => {
           </Button>
         </div>
         <div className="wrapper-container">
-          <label htmlFor="switch">Switch (Toggle)</label>
-          <Switch type="toggle" name="switch" active={toggleValue} />
+          <label htmlFor="switch">
+            Switch (Toggle)
+            <Switch type="toggle" name="switch" active={toggleValue} />
+          </label>
+
         </div>
         <div className="wrapper-container">
           <label htmlFor="switch-checkbox">Switch (Checkbox)</label>

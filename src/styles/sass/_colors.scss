@@ -58,15 +58,16 @@ $yellow : (
 
 :root {
   @include create-color(blue, $blue);
+  --blue-accent        : var(--blue-500);
   @include create-color(red, $red);
   @include create-color(yellow, $yellow);
   @include create-color(green, $green);
   --body-bg-color      : #FBFDFE;
   --bg-alt-color       : #F3F4F6;
   --border-color       : #E5E7EB;
-  --grey-lighter-color : #9CA3AF;
-  --grey-light-color   : #4B5563;
-  --grey-color         : #6B7280;
+  --grey-lighter-color : #B7C0C7;
+  --grey-light-color   : #8E9BA4;
+  --grey-color         : #687782;
   --text-color         : var(--grey-color);
   --title-color        : #0F172A;
   --black-color        : #000000;
