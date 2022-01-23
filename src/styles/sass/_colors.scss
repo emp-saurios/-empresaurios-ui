@@ -52,7 +52,18 @@ $yellow : (
 
 @mixin create-color($name, $map) {
   @each $code, $color in $map {
-    --#{$name}-#{$code} : #{$color};
+    $selector      : #{$name}-#{$code};
+    --#{$selector} : #{$color};
+
+    @at-root :global(.#{$selector}) {
+      --color      : var(--#{$selector});
+      // Si el color es 600, el alternativo será 700
+      // En caso contrario el alternativo siempre será 600
+      --color-alt  : var(--#{if($code == 600, #{$name}-700, #{$name}-600)});
+      // Si el color es 100, el suave será 50
+      // En caso contrario el suave siempre será 100
+      --color-soft : var(--#{if($code == 100, #{$name}-50, #{$name}-100)});
+    }
   }
 }
 
@@ -62,6 +73,9 @@ $yellow : (
   @include create-color(red, $red);
   @include create-color(yellow, $yellow);
   @include create-color(green, $green);
+  --color              : var(--blue-accent);
+  --color-alt          : var(--blue-600);
+  --color-soft         : var(--blue-100);
   --body-bg-color      : #FBFDFE;
   --bg-alt-color       : #F3F4F6;
   --border-color       : #E5E7EB;
