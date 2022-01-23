@@ -1,4 +1,4 @@
-.input {
+.checkbox {
   display         : inline-flex;
   justify-content : center;
   align-items     : center;
@@ -19,7 +19,42 @@
   }
 
   &:checked::before {
-    background       : url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png') center / 0.6rem  no-repeat var(--blue-accent);
-    border-color     : var(--blue-accent);
+    background   : url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png') center / 0.6rem no-repeat var(--blue-accent);
+    border-color : var(--blue-accent);
+  }
+}
+
+.toggle {
+  --size           : 1.25rem;
+  display          : flex;
+  align-items      : center;
+  position         : relative;
+  cursor           : pointer;
+  appearance       : none;
+  width            : calc(var(--size) * 2);
+  height           : var(--size);
+  border-radius    : calc(var(--size) / 2);
+  background-color : var(--grey-light-color);
+
+  &::before {
+    --spacing        : 3px;
+    content          : '';
+    position         : absolute;
+    left             : 3px;
+    display          : inline-flex;
+    flex             : none;
+    width            : 0.9rem;
+    height           : 0.9rem;
+    border-radius    : 50%;
+    background-color : var(--white-color);
+    transition       : transform 0.15s;
+  }
+
+  &:checked {
+    background : url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png') 0.55rem center / 0.6rem no-repeat var(--blue-accent);
+
+    &::before {
+      transform : translateX(var(--size));
+    }
   }
 }
