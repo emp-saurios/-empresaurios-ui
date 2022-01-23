@@ -58,6 +58,7 @@ $yellow : (
 
 :root {
   @include create-color(blue, $blue);
+  --blue-accent        : var(--blue-500);
   @include create-color(red, $red);
   @include create-color(yellow, $yellow);
   @include create-color(green, $green);
