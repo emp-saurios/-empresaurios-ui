@@ -14,7 +14,7 @@
   white-space      : nowrap;
   font-weight      : bold;
   cursor           : pointer;
-  transition       : background-color 150ms, border-color 150ms, transform 150ms;
+  transition       : background-color var(--transition), border-color var(--transition), transform var(--transition);
 
   &:hover {
     --button-color : var(--blue-600);
@@ -78,7 +78,7 @@
   font-size        : var(--small-font-size);
   background-color : transparent;
   cursor           : pointer;
-  transition       : background-color 150ms;
+  transition       : background-color var(--transition);
 
   // No hay manera directa de acceder al ícono desde el módulo
   svg {

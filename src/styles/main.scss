@@ -1,11 +1,6 @@
-* {
-  margin     : 0;
-  padding    : 0;
-  box-sizing : border-box;
-}
-
 @import 'config/config';
 
+@import 'sass/base';
 @import 'sass/colors';
 @import 'sass/typography';
 @import 'sass/shadows';
