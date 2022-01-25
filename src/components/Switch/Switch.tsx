@@ -1,10 +1,14 @@
 import React, { FC, HTMLProps } from 'react'
-import styles from './Switch.css'
+import styles from './Switch.scss'
 
-const Switch: FC<SwitchProps> = ({ type = 'toggle', className = '', ...rest }) => {
-  const customClass = styles[type] + className
-
-  return <input className={customClass} type={type === 'radio' ? 'radio' : 'checkbox'} {...rest} />
+const Switch: FC<SwitchProps> = ({ type = 'checkbox', className = '', ...rest }) => {
+  return (
+    <input
+      className={`${styles.input} ${styles[type]} ${className}`}
+      type={type === 'radio' ? 'radio' : 'checkbox'}
+      {...rest}
+    />
+  )
 }
 
 interface SwitchProps extends HTMLProps<HTMLInputElement> {
