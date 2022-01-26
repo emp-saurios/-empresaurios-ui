@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { ExampleComponent, Input, Separator, Form, Accordion } from 'empresaurios-ui'
+import { ExampleComponent, Input, Separator, Form, Accordion, SearchBar } from 'empresaurios-ui'
 import 'empresaurios-ui/dist/index.css'
 import ButtonSection from './sections/Buttons/ButtonSection'
 
@@ -16,6 +16,7 @@ const IconTest = () => (
 )
 
 const App = () => {
+  const [value, setValue] = useState('')
   return (
     <div style={{ padding: '0 2rem' }}>
       <ExampleComponent text="Empresaurios components UI 😄" />
@@ -94,6 +95,11 @@ const App = () => {
             página de planes y precios.
           </p>
         </Accordion>
+      </div>
+
+      <div>
+        <h3>Barra de búsqueda</h3>
+        <SearchBar value={value} onChange={(e) => setValue(e.target.value)} />
       </div>
     </div>
   )
