@@ -1,14 +1,16 @@
-import React from 'react'
-import { useInput } from './hooks/useInput'
+import React, { ChangeEvent, FC } from 'react'
 
-const SearchBar = () => {
-  const searchInput = useInput('text')
-
+const SearchBar: FC<SearchBarProps> = ({ value, onChange }) => {
   return (
     <form>
-      <input {...searchInput} />
+      <input type="text" value={value} onChange={onChange} />
     </form>
   )
+}
+
+interface SearchBarProps {
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  value: string
 }
 
 export default SearchBar
