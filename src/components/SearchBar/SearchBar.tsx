@@ -1,7 +1,14 @@
+import React from 'react'
+import { useInput } from './hooks/useInput'
+
 const SearchBar = () => {
+  const searchInput = useInput('text')
+
   return (
     <form>
-      <input type="text" />
+      <input {...searchInput} />
     </form>
   )
 }
+
+export default SearchBar
