@@ -52,21 +52,37 @@ $yellow : (
 
 @mixin create-color($name, $map) {
   @each $code, $color in $map {
-    --#{$name}-#{$code} : #{$color};
+    $selector      : #{$name}-#{$code};
+    --#{$selector} : #{$color};
+
+    @at-root :global(.#{$selector}) {
+      --color      : var(--#{$selector});
+      // Si el color es 600, el alternativo será 700
+      // En caso contrario el alternativo siempre será 600
+      --color-alt  : var(--#{if($code == 600, #{$name}-700, #{$name}-600)});
+      // Si el color es 100, el suave será 50
+      // En caso contrario el suave siempre será 100
+      --color-soft : var(--#{if($code == 100, #{$name}-50, #{$name}-100)});
+    }
   }
 }
 
 :root {
   @include create-color(blue, $blue);
+  --blue-accent        : var(--blue-500);
   @include create-color(red, $red);
   @include create-color(yellow, $yellow);
   @include create-color(green, $green);
+  --color              : var(--blue-accent);
+  --color-alt          : var(--blue-600);
+  --color-soft         : var(--blue-100);
   --body-bg-color      : #FBFDFE;
-  --body-bg-alt-color  : #F3F4F6;
+  --bg-alt-color       : #F3F4F6;
   --border-color       : #E5E7EB;
-  --text-lighter-color : #4B5563;
-  --text-light-color   : #9CA3AF;
-  --text-color         : #6B7280;
+  --grey-lighter-color : #B7C0C7;
+  --grey-light-color   : #8E9BA4;
+  --grey-color         : #687782;
+  --text-color         : var(--grey-color);
   --title-color        : #0F172A;
   --black-color        : #000000;
   --white-color        : #FFFFFF;

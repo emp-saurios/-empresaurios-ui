@@ -36,13 +36,14 @@ body {
   font-family : 'Manrope', sans-serif;
   line-height : 1.8;
   font-size   : var(--normal-font-size);
+  color       : var(--text-color);
 }
 
 $heading-selector : '';
 @for $i from 1 through 4 {
-  $heading-selector : $heading-selector + 'h#{$i}, .h#{$i},';
+  $heading-selector : $heading-selector + 'h#{$i}, :global(.h#{$i}),';
   h#{$i},
-  .h#{$i} {
+  :global(.h#{$i}) {
     font-size : var(--h#{$i}-font-size);
   }
 }
@@ -50,4 +51,6 @@ $heading-selector : '';
 #{$heading-selector} {
   font-family : var(--title-font-family);
   line-height : 1.5;
+  font-weight : 700;
+  color       : var(--title-color);
 }

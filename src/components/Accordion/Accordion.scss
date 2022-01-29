@@ -1,0 +1,30 @@
+.container {
+  display          : grid;
+  gap              : 0.5rem;
+  padding          : 1.5rem;
+  border-radius    : 0.5rem;
+  border           : 1px solid var(--border-color);
+  background-color : var(--white-color);
+  color            : var(--grey-light-color);
+  cursor           : pointer;
+}
+
+.header {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : baseline;
+  flex-wrap       : nowrap;
+  gap             : 1.5rem;
+}
+
+.title {
+  color : var(--text-color);
+
+  .open & {
+    color : var(--title-color);
+  }
+}
+
+.icon {
+  background-color : blue;
+}

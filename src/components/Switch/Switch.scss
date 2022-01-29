@@ -1,0 +1,72 @@
+.input {
+  --background : url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png') center / 0.6rem no-repeat var(--blue-accent);
+  display      : inline-flex;
+  align-items  : center;
+  appearance   : none;
+  cursor       : pointer;
+
+  &::before {
+    content : '';
+    display : inline-flex;
+    flex    : none;
+  }
+}
+
+.toggle {
+  --size           : 1.25rem;
+  width            : calc(var(--size) * 2);
+  height           : var(--size);
+  border-radius    : calc(var(--size) / 2);
+  background-color : var(--grey-light-color);
+
+  &::before {
+    margin-left      : 3px;
+    width            : 0.9rem;
+    height           : 0.9rem;
+    border-radius    : 50%;
+    background-color : var(--white-color);
+    transition       : transform var(--transition);
+  }
+
+  &:checked {
+    background            : var(--background);
+    background-position-x : 0.55rem;
+
+    &::before {
+      transform : translateX(var(--size));
+    }
+  }
+}
+
+.checkbox,
+.radio {
+  justify-content : center;
+  width           : 1.25rem;
+  height          : 1.25rem;
+  padding         : 0.25rem;
+
+  &::before {
+    width         : 100%;
+    height        : 100%;
+    border        : 2px solid var(--grey-lighter-color);
+    border-radius : 2.5px;
+  }
+
+  &:checked::before {
+    border-color : var(--blue-accent);
+  }
+}
+
+.checkbox:checked::before {
+  background : var(--background);
+}
+
+.radio {
+  &::before {
+    border-radius : 50%;
+  }
+
+  &:checked::before {
+    background : radial-gradient(circle at 6px 6px, var(--blue-accent) 4px, transparent 4px);
+  }
+}
