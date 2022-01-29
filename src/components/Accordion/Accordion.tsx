@@ -1,20 +1,21 @@
 import React, { FC, useState } from 'react'
-import Icon from '../Icon'
+import styles from './Accordion.scss';
+import Button from "../Button";
 
 const Accordion: FC<AccordionProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const icon = isOpen ? 'ArrowUpIcon' : 'ArrowDownIcon'
-
   const toggle = () => setIsOpen(!isOpen)
+  const icon = isOpen ? 'ChevronUpIcon' : 'ChevronDownIcon'
+  const customClass = `${styles.container} ${styles[isOpen ? 'open' : 'close']}`
 
   return (
-    <div>
-      <div onClick={toggle}>
-        <h3>{title}</h3>
-        <Icon icon={icon} iconType="outline" />
-      </div>
-      <div>{isOpen && children}</div>
-    </div>
+    <article onClick={toggle} className={customClass}>
+      <header className={styles.header}>
+        <p className={`h4 ${styles.title}`}>{title}</p>
+        <Button id="action" typeButton="action" icon={icon} />
+      </header>
+      {isOpen && <div>{children}</div>}
+    </article>
   )
 }
 

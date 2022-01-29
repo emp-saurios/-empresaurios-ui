@@ -10,12 +10,13 @@
 }
 
 .fill {
-  margin-bottom : 0.25rem;
-  padding       : 0.5rem 1rem;
-  border        : 1px solid var(--border-color);
-  border-radius : 0.25rem;
-  color         : var(--text-color);
-  font-size     : var(--small-font-size);
+  margin-bottom    : 0.25rem;
+  padding          : 0.5rem 1rem;
+  border           : 1px solid var(--border-color);
+  border-radius    : 0.25rem;
+  color            : var(--text-color);
+  font-size        : var(--small-font-size);
+  background-color : transparent;
 
   &:focus {
     outline : 1.5px solid var(--blue-300);
@@ -23,9 +24,6 @@
 
   &::placeholder {
     color : var(--grey-lighter-color);
-  }
-
-  &.success {
   }
 }
 
