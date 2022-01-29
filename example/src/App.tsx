@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ExampleComponent, Input, Separator, Form } from 'empresaurios-ui'
+import { ExampleComponent, Input, Separator, Form, Accordion } from 'empresaurios-ui'
 import 'empresaurios-ui/dist/index.css'
 import ButtonSection from './sections/Buttons/ButtonSection'
 
@@ -81,6 +81,19 @@ const App = () => {
           <Input title="Contraseña" type="password" value="123123" />
         </Form>
         <hr />
+      </div>
+
+      <div>
+        <h3>Accordion</h3>
+        <Accordion title="¿Qué incluye Google Workspace (anteriormente G Suite)?">
+          <p>
+            Al igual que en G Suite, todos los planes de Google Workspace proporcionan correo
+            electrónico personalizado para su empresa y ofrecen herramientas de colaboración, como
+            Gmail, Calendario, Meet, Chat, Drive, Documentos, Hojas de cálculo, Presentaciones,
+            Formularios, Sites y muchas otras más. Para obtener detalles adicionales, visite nuestra
+            página de planes y precios.
+          </p>
+        </Accordion>
       </div>
     </div>
   )

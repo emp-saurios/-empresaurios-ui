@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { Button, Switch } from 'empresaurios-ui'
 
 const ButtonSection = () => {
   const [state, setState] = useState({
-    toggleValue: true,
-    checkboxValue: true
+    toggle: true,
+    checkbox: true,
+    radio: 'none' as 'yes' | 'no' | 'none'
   })
 
-  const { checkboxValue, toggleValue } = state
+  const { checkbox, toggle, radio } = state
 
-  const onChange = (target: keyof typeof state) => {
+  const onChange = (e: FormEvent<HTMLInputElement>) => {
     setState({
       ...state,
-      [target]: !state[target]
+      [e.currentTarget.name]: e.currentTarget.value
     })
   }
 
@@ -76,19 +77,29 @@ const ButtonSection = () => {
           </Button>
         </div>
         <div className="wrapper-container">
-          <label htmlFor="switch">
-            Switch (Toggle)
-            <Switch type="toggle" name="switch" active={toggleValue} />
-          </label>
-
+          <label htmlFor="switch">Switch (Toggle)</label>
+          <Switch type="toggle" name="switch" defaultChecked={toggle} onChange={onChange} />
         </div>
         <div className="wrapper-container">
-          <label htmlFor="switch-checkbox">Switch (Checkbox)</label>
+          <label htmlFor="checkbox">Switch (Checkbox)</label>
+          <Switch type="checkbox" onChange={onChange} name="checkbox" defaultChecked={checkbox} />
+        </div>
+        <div className="wrapper-container">
+          <label htmlFor="radio">Switch (radio) - No</label>
           <Switch
-            type="checkbox"
-            onChange={() => onChange('checkboxValue')}
-            name="switch-checkbox"
-            active={checkboxValue}
+            type="radio"
+            onChange={onChange}
+            name="radio"
+            value="no"
+            checked={radio === 'no'}
+          />
+          <label htmlFor="radio">Switch (radio) - Yes</label>
+          <Switch
+            type="radio"
+            onChange={onChange}
+            name="radio"
+            value="yes"
+            checked={radio === 'yes'}
           />
         </div>
       </div>
