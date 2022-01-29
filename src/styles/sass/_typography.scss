@@ -36,6 +36,7 @@ body {
   font-family : 'Manrope', sans-serif;
   line-height : 1.8;
   font-size   : var(--normal-font-size);
+  color       : var(--text-color);
 }
 
 $heading-selector : '';
@@ -50,4 +51,6 @@ $heading-selector : '';
 #{$heading-selector} {
   font-family : var(--title-font-family);
   line-height : 1.5;
+  font-weight : 700;
+  color       : var(--title-color);
 }
