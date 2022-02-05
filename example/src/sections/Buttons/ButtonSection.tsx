@@ -44,6 +44,7 @@ const ButtonSection = () => {
           <label htmlFor="ghost">Ghost</label>
           <Button
             id="ghost"
+            color="green-500"
             size="small"
             typeButton="ghost"
             icon="ThumbUpIcon"
