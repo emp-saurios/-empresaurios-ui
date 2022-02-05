@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
-import './Separator.css'
+import './Separator.scss'
 
-const Separator: FC<SeparatorProps> = ({ text }) => {
+const Separator: FC<SeparatorProps> = ({ text, className = '', textClassName = '' }) => {
   return (
-    <div>
-      <p>{text}</p>
+    <div className={`${className}`}>
+      <p className={`${textClassName}`}>{text}</p>
       <hr />
     </div>
   )
@@ -12,6 +12,8 @@ const Separator: FC<SeparatorProps> = ({ text }) => {
 
 interface SeparatorProps {
   text?: string
+  className?: string
+  textClassName?: string
 }
 
 export default Separator

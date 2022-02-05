@@ -14,6 +14,7 @@ npm install --save @emp-saurios/empresaurios-ui
 
 ```tsx
 import React from 'react'
+import '@emp-saurios/empresaurios-ui/dist/index.css'
 
 import { Input } from '@emp-saurios/empresaurios-ui'
 
