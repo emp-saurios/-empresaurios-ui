@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { ExampleComponent, Input, Separator, Form, Accordion, SearchBar } from 'empresaurios-ui'
+import { ExampleComponent, Input, Form, Accordion, SearchBar } from 'empresaurios-ui'
 import 'empresaurios-ui/dist/index.css'
 import ButtonSection from './sections/Buttons/ButtonSection'
 
@@ -71,7 +71,6 @@ const App = () => {
 
       <div>
         <h3>Separadores</h3>
-        <Separator text="Ya tienes cuenta?" />
         <hr />
       </div>
 
