@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import './Separator.css'
+import './Separator.scss'
 
 const Separator: FC<SeparatorProps> = ({ text, className = '', textClassName = '' }) => {
   return (
