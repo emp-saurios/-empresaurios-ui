@@ -1,7 +1,15 @@
 import React, { FC, InputHTMLAttributes, ReactNode } from 'react'
 import styles from './Input.scss'
 
-const Input: FC<InputProps> = ({ name, title, variant = '', message, icon, ...rest }) => {
+const Input: FC<InputProps> = ({
+  name,
+  title,
+  variant = '',
+  message,
+  icon,
+  className,
+  ...rest
+}) => {
   const { icon_, input, label, fill, message_ } = styles
 
   return (
@@ -12,7 +20,7 @@ const Input: FC<InputProps> = ({ name, title, variant = '', message, icon, ...re
         </label>
       )}
       <div className={input}>
-        <input className={fill} name={name} {...rest} />
+        <input className={`${fill} ${className}`} name={name} {...rest} />
         {icon && <div className={icon_}>{icon}</div>}
       </div>
       {message && <p className={message_}>{message}</p>}
