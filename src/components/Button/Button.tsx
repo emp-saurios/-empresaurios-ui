@@ -6,7 +6,7 @@ import { HeroIconsType, IconType } from '../Icon/Icon'
 const Button: FC<ButtonProps> = ({
   children,
   icon,
-  color= 'blue-500',
+  color = 'blue-500',
   iconSide = 'right',
   typeButton = 'default',
   className = '',
@@ -15,7 +15,10 @@ const Button: FC<ButtonProps> = ({
   ...rest
 }) => {
   const actionBtnWithText = typeButton === 'action' && children ? styles.withText : ''
-  const btnClassName = typeButton === 'action' ? styles.action : `${styles.button} ${styles[typeButton]} ${styles[size]} ${className} ${color} ${actionBtnWithText}`
+  const btnClassName =
+    typeButton === 'action'
+      ? styles.action
+      : `${styles.button} ${styles[typeButton]} ${styles[size]} ${className} ${color} ${actionBtnWithText}`
 
   return (
     <button className={btnClassName} {...rest}>
@@ -34,7 +37,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconSide?: 'left' | 'right'
   typeButton?: 'default' | 'light' | 'white' | 'ghost' | 'link' | 'action'
   size?: 'normal' | 'small' | 'smaller'
-  iconType?: IconType,
+  iconType?: IconType
 }
 
 export default Button
