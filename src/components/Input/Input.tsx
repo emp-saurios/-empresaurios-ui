@@ -29,7 +29,7 @@ const Input: FC<InputProps> = ({
 }
 
 type Variants = 'success' | 'error' | 'warning' | 'disabled'
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string
   variant?: Variants
   icon?: ReactNode

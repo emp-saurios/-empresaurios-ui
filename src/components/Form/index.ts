@@ -1,3 +1,3 @@
-import Form from './Form'
+import Form, { FormProps } from './Form'
 
-export { Form as default }
+export { Form as default, FormProps }

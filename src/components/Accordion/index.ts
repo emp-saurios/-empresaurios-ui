@@ -1,3 +1,3 @@
-import Accordion from './Accordion'
+import Accordion, { AccordionProps } from './Accordion'
 
-export { Accordion as default }
+export { Accordion as default, AccordionProps }

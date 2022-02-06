@@ -20,7 +20,7 @@ const Icon: FC<IconProps> = ({icon, iconType, className = '', size = 16}) => {
 export type HeroIconsType = keyof typeof HeroIcons
 export type IconType = 'outline' | 'solid'
 
-type IconProps = {
+export interface IconProps {
   iconType: IconType
   icon: HeroIconsType
   className?: string

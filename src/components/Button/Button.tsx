@@ -31,7 +31,7 @@ const Button: FC<ButtonProps> = ({
   )
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
   icon?: HeroIconsType
   iconSide?: 'left' | 'right'

@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
-import styles from './Accordion.scss';
-import Button from "../Button";
+import styles from './Accordion.scss'
+import Button from '../Button'
 
 const Accordion: FC<AccordionProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +19,7 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
   )
 }
 
-interface AccordionProps {
+export interface AccordionProps {
   title: string
 }
 
