@@ -10,7 +10,7 @@
 }
 
 .fill {
-  margin-bottom    : 0.25rem;
+  width            : 100%;
   padding          : 0.5rem 1rem;
   border           : 1px solid var(--border-color);
   border-radius    : 0.25rem;
@@ -38,8 +38,9 @@
 }
 
 .message_ {
-  color     : var(--grey-lighter-color);
-  font-size : var(--smaller-font-size);
+  padding-top : 0.25rem;
+  color       : var(--grey-lighter-color);
+  font-size   : var(--smaller-font-size);
 }
 
 /* ----- Variants ----- */

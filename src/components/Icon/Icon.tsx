@@ -6,7 +6,7 @@ import styles from './Icon.scss'
 
 const Icon: FC<IconProps> = ({ icon, iconType }) => {
   return (
-    <span className={styles.iconContainer}>
+    <span className={`hero-icon ${styles.iconContainer}`}>
       {/* @ts-ignore */}
       {iconType === 'outline' ? HeroIcons[icon]() : HeroIconsSolid[icon]()}
     </span>

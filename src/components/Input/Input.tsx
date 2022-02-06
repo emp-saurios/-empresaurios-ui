@@ -13,17 +13,17 @@ const Input: FC<InputProps> = ({
   const { icon_, input, label, fill, message_ } = styles
 
   return (
-    <div className={styles[variant]}>
+    <div className={`form-input ${variant} ${styles[variant]} ${className}`}>
       {title && (
-        <label className={label} htmlFor={name}>
+        <label className={`label ${label}`} htmlFor={name}>
           {title}
         </label>
       )}
-      <div className={input}>
-        <input className={`${fill} ${className}`} name={name} {...rest} />
-        {icon && <div className={icon_}>{icon}</div>}
+      <div className={`input ${input}`}>
+        <input className={`fill ${fill}`} name={name} {...rest} />
+        {icon && <div className={`icon ${icon_}`}>{icon}</div>}
       </div>
-      {message && <p className={message_}>{message}</p>}
+      {message && <p className={`message ${message_}`}>{message}</p>}
     </div>
   )
 }
