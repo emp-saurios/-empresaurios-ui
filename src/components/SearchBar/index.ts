@@ -1,3 +1,3 @@
-import SearchBar from './SearchBar'
+import SearchBar, { SearchBarProps } from './SearchBar'
 
-export { SearchBar as default }
+export { SearchBar as default, SearchBarProps }

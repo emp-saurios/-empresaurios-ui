@@ -15,7 +15,7 @@ const SearchBar: FC<SearchBarProps> = ({
   )
 }
 
-interface SearchBarProps
+export interface SearchBarProps
   extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
   value: string

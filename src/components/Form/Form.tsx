@@ -10,7 +10,7 @@ const Form: FC<FormProps> = ({ children, titleText, ...rest }) => {
   )
 }
 
-interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   titleText?: string
 }
 

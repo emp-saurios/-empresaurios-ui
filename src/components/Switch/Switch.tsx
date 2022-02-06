@@ -11,7 +11,7 @@ const Switch: FC<SwitchProps> = ({ type = 'checkbox', className = '', ...rest })
   )
 }
 
-interface SwitchProps extends HTMLProps<HTMLInputElement> {
+export interface SwitchProps extends HTMLProps<HTMLInputElement> {
   active?: boolean
   type?: 'toggle' | 'checkbox' | 'radio'
 }
